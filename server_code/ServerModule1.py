@@ -22,5 +22,19 @@ def read_csv(csv_object):
 @anvil.server.callable
 def load_numpy(csv_object):
     # Get the data as bytes.
-    csv_bytes = csv_object.get_bytes()
-    app_tables.test.add_row(coumn1=csv_bytes)
+    numpy_bytes = csv_object.get_bytes()
+    csv_string = str(numpy_bytes)
+    print(type(csv_string))
+    app_tables.test.add_row(Column1=csv_string)
+    # This finds all rows where object_col is a
+    # dict and contains a key 'the_answer' with
+    # the value '42' - no matter what other keys
+    # are in the dict.
+r = app_tables.my_table.search(object_col={'the_answer': 42})
+    mdf = app_tables.test.get()
+    app_tables.test.
+  search(Column1=q.less_than(
+      datetime(day=14, month=12, year=2017),
+    )
+    )
+    
