@@ -20,4 +20,12 @@ class Form1(Form1Template):
 
   def upload_numpy_change(self, files, **event_args):
     for f in files:
-        anvil.server.call('load_numpy', f)
+        anvil.server.call('load_text', f)
+
+  def get_v_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.server.call('get_v')
+
+  def get_dict_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.server.call('get_dict')

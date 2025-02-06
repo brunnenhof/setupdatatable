@@ -10,6 +10,16 @@ components:
     name: upload_numpy
     properties: {text: upload numpy}
     type: FileLoader
+  - event_bindings: {click: get_v_click}
+    layout_properties: {grid_position: 'OTRAXG,OXJMKX'}
+    name: get_v
+    properties: {role: outlined-button, text: get v}
+    type: Button
+  - event_bindings: {click: get_dict_click}
+    layout_properties: {grid_position: 'OTRAXG,ZRZETL'}
+    name: get_dict
+    properties: {role: outlined-button, text: get_dict}
+    type: Button
   layout_properties: {slot: default}
   name: content_panel
   properties: {col_widths: '{}'}

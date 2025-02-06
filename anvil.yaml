@@ -1,10 +1,13 @@
 allow_embedding: false
 db_schema:
   test:
-    client: full
+    client: none
     columns:
-    - admin_ui: {order: 0, width: 422}
-      name: Column1
+    - admin_ui: {order: 0, width: 200}
+      name: id
+      type: number
+    - admin_ui: {order: 1, width: 200}
+      name: dict
       type: simpleObject
     server: full
     title: test
