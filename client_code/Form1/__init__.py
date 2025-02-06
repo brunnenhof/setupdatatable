@@ -17,3 +17,7 @@ class Form1(Form1Template):
     # This method is called when a new file is loaded into this FileLoader
     for f in files:
         anvil.server.call('read_csv', f)
+
+  def upload_numpy_change(self, files, **event_args):
+    for f in files:
+        anvil.server.call('load_numpy', f)

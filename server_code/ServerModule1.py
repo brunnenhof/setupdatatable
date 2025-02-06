@@ -18,3 +18,9 @@ def read_csv(csv_object):
         field_list = line.split(",")
         for field in field_list:
             print("field=", field)
+
+@anvil.server.callable
+def load_numpy(csv_object):
+    # Get the data as bytes.
+    csv_bytes = csv_object.get_bytes()
+    app_tables.test.add_row(coumn1=csv_bytes)
