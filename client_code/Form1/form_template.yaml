@@ -5,6 +5,10 @@ components:
     name: file_loader_1
     properties: {}
     type: FileLoader
+  - layout_properties: {grid_position: 'MWBBBH,KHGURJ'}
+    name: add_blob
+    properties: {text: add_blob}
+    type: Button
   layout_properties: {slot: default}
   name: content_panel
   properties: {col_widths: '{}'}
