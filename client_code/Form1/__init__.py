@@ -13,10 +13,14 @@ class Form1(Form1Template):
 
     # Any code you write here will run before the form opens.
 
-  def file_loader_1_change(self, files, **event_args):
+#  def file_loader_1_change(self, files, **event_args):
     # This method is called when a new file is loaded into this FileLoader
-    for f in files:
-        anvil.server.call('read_csv', f)
+#    for f in files:
+#        anvil.server.call('read_csv', f)
+
+  def file_loader_1_change(self, file, **event_args):
+    """This method is called when a new file is loaded into this FileLoader"""
+    anvil.server.call('import_csv_data',file)
 
   def upload_numpy_change(self, files, **event_args):
     for f in files:
